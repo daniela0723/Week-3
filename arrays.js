@@ -24,9 +24,9 @@ let averageAge;
 
 for (let i = 0; i < ages.length; i++) {
   sumOfAges += ages[i];
-  averageAge = sumOfAges / ages.length;
+  averageAge = Math.round(sumOfAges / ages.length);
 }
-console.log(Math.round(averageAge)); //Displays 34.444.  After ages.push(80): 310/9 = 34.444...
+console.log(averageAge); 
 
 ///////////////////////////////////////////////////////////
 
