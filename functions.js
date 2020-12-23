@@ -2,7 +2,7 @@
 function repeatWord(string, number) {
   if (number === 1) {
     return string;
-  } else if (number > 1){
+  } else if (number > 1) {
     return string + repeatWord(string, number - 1);
     //string + string...
   } else {
@@ -76,7 +76,7 @@ buyDrink(isHotOutside, 5);
 /*13. This function converts the temperature from degrees in Farenheit to degrees in Celsius.  This conversion is useful for international travelers visiting the US, like those visiting Las Vegas. */
 
 function convertFarenheitToCelsius(temperatureInFarenheit) {
-  const temperatureInCelsius = (Math.round((temperatureInFarenheit - 32) * (5/9)));
+  const temperatureInCelsius = (Math.round((temperatureInFarenheit - 32) * (5 / 9)));
   console.log(`${temperatureInFarenheit} degrees Farenheit is approximately ${temperatureInCelsius} degrees Celsius`);
 }
 

@@ -5,9 +5,9 @@ const lastElement = ages.slice(-1);
 const firstElement = ages.slice(0, 1);
 
 //1.a Subtract first element's value from the last element's value programmatically(so use a function?).
-;
+
 function ageDifference(arrayName) {
-      console.log(arrayName.slice(-1) - arrayName.slice(0,1));
+  console.log(arrayName.slice(-1) - arrayName.slice(0, 1));
 }
 
 ageDifference(ages);//First call; displays 90.
@@ -15,6 +15,8 @@ ageDifference(ages);//First call; displays 90.
 //1.b Add another element to the end of the array to test the function.
 ages.push(80);
 ageDifference(ages); //Second call; displays 77.
+ages.push(53);
+ageDifference(ages);
 
 //1.c Calculate the average age using a loop.
 let sumOfAges = 0;
@@ -24,7 +26,7 @@ for (let i = 0; i < ages.length; i++) {
   sumOfAges += ages[i];
   averageAge = sumOfAges / ages.length;
 }
-console.log(averageAge); //Displays 34.444.  After ages.push(80): 310/9 = 34.444...
+console.log(Math.round(averageAge)); //Displays 34.444.  After ages.push(80): 310/9 = 34.444...
 
 ///////////////////////////////////////////////////////////
 
@@ -35,8 +37,8 @@ function getAverageStringLength(array) {
   //Convert strings to numbers that represent length.
   let stringLengths = array.map(string => string.length);
   //Add numbers.
-  let sumOfStringLengths = stringLengths.reduce((a,b) => a + b, 0);
-  console.log(sumOfStringLengths / array.length);
+  let sumOfStringLengths = stringLengths.reduce((a, b) => a + b, 0);
+  console.log(Math.round(sumOfStringLengths / array.length));
 }
 
 getAverageStringLength(names);
@@ -59,6 +61,13 @@ for (name of names) {
 }
 console.log(nameLengths);
 
+const nameLengths2 = [];
+nameLengths2.push(names.map(name => name.length));
+console.log(nameLengths2);
+
+
+
+
 ////////////////////////////////////////////////////////////
 
 //6. Iterate over the nameLengths array and calculate the sum of all the elements in the array
@@ -67,3 +76,6 @@ for (let i = 0; i < nameLengths.length; i++) {
   total += nameLengths[i];
 }
 console.log(total);
+
+
+
